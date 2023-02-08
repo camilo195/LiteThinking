@@ -1,0 +1,23 @@
+package com.carabali.app.model.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.carabali.app.model.dao.UsuarioDao;
+import com.carabali.app.model.entity.Usuario;
+import com.carabali.app.model.service.UsuarioService;
+
+@Service
+public class UsuarioServiceImpl implements UsuarioService {
+	
+	@Autowired
+	private UsuarioDao usuarioDao;	
+
+	@Override
+	public List<Usuario> getAllUser() {
+		return (List<Usuario>) usuarioDao.findAll();
+	}
+
+}

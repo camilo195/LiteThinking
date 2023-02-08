@@ -1,0 +1,12 @@
+package com.carabali.app.model.service;
+
+import java.util.List;
+
+import com.carabali.app.model.dto.UsuarioDTO;
+
+public interface UsuarioService {
+	
+	List<UsuarioDTO> getAllUser();
+	UsuarioDTO getByUserName(String name);
+
+}

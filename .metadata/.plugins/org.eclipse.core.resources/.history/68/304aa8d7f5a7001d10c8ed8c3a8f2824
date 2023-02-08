@@ -1,0 +1,16 @@
+package com.carabali.app.model.serviceImpl;
+
+import java.util.List;
+
+import com.carabali.app.model.entity.Usuario;
+import com.carabali.app.model.service.UsuarioService;
+
+public class UsuarioServiceImpl implements UsuarioService {
+
+	@Override
+	public List<Usuario> getAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

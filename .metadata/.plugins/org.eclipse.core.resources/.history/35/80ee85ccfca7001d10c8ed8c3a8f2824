@@ -1,0 +1,31 @@
+package com.carabali.app.model.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.carabali.app.model.dao.UsuarioDao;
+import com.carabali.app.model.entity.Usuario;
+import com.carabali.app.model.service.UsuarioService;
+
+@Service
+public class UsuarioServiceImpl implements UsuarioService {
+	
+	@Autowired
+	private UsuarioDao usuarioDao;	
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Usuario> getAllUser() {
+		return (List<Usuario>) usuarioDao.findAll();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Usuario getByNameUser(String name) {
+		return usuarioDao.findByNombre(name).get();
+	}
+
+}

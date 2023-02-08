@@ -1,0 +1,5 @@
+package com.carabali.app.model.dto;
+
+public class UsuarioDTO {
+
+}

@@ -1,0 +1,9 @@
+package com.carabali.app.model.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.carabali.app.model.entity.Usuario;
+
+public interface UsuarioDao extends CrudRepository<Usuario, Long>{
+
+}
